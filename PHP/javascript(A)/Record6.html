@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body align="center">
+
+    <h1><b><u>Simple Calculator</u></b></h1>
+
+    <br><br>
+
+    <script>
+
+        function AddNum() { //This function is used to add the given numbers
+            var num1 = parseFloat(document.getElementById("num_1").value); //input first number
+            var num2 = parseFloat(document.getElementById("num_2").value); //input second number
+            var sum = 0;
+            var resultText;
+
+            sum = num1 + num2;
+            resultText = sum;
+            document.getElementById("result").innerHTML = resultText;
+        }
+
+        function SubNum() { //This function is used to subtract the given numbers
+            var num1 = parseFloat(document.getElementById("num_1").value); //input first number
+            var num2 = parseFloat(document.getElementById("num_2").value); //input second number
+            var sub = 0;
+            var resultText;
+
+            sub = num1 - num2;
+            resultText = sub;
+            document.getElementById("result").innerHTML = resultText;
+        }
+
+        function MulNum() { //This function is used to multiply the given numbers
+            var num1 = parseFloat(document.getElementById("num_1").value); //input first number
+            var num2 = parseFloat(document.getElementById("num_2").value); //input second number
+            var mul = 0;
+            var resultText;
+
+            mul = num1 * num2;
+            resultText = mul;
+            document.getElementById("result").innerHTML = resultText;
+        }
+
+        function DivNum() { //This function is used to divide the given numbers
+            var num1 = parseFloat(document.getElementById("num_1").value); //input first number
+            var num2 = parseFloat(document.getElementById("num_2").value); //input second number
+            var div = 0;
+            var resultText;
+
+            if (num_2 == 0) {
+                alert("Please Enter a value Greater than 0 !!");
+                resultText = "No Result / Infinite !!"
+                document.getElementById("result").innerHTML = resultText;
+            }
+
+            else{
+                div = num1 / num2;
+                resultText = div;
+                document.getElementById("result").innerHTML = resultText;
+            }
+        }
+
+        function RemNum() { //This function is used to find the remainder of the given numbers
+            var num1 = parseFloat(document.getElementById("num_1").value); //input first number
+            var num2 = parseFloat(document.getElementById("num_2").value); //input second number
+            var rem = 0;
+            var resultText;
+
+            if (num_2 == 0) {
+                alert("Please Enter a value Greater than 0 !!");
+                resultText = "No Result !!";
+                document.getElementById("result").innerHTML = resultText;
+            }
+
+            else{
+                rem = num1 % num2;
+                resultText = rem;
+                document.getElementById("result").innerHTML = resultText;
+            }
+        }
+
+    </script>
+
+    <center>
+        <form method="" action="" target="">
+            <table border="2" width="450" height="150">
+                <tr align="center">
+                    <td>
+                        <label for="First Number">First Number</label>
+                    </td>
+                    <td>
+                        <input type="number" id="num_1" name="number 1" placeholder="Enter the First Number :: ">
+                    </td>
+                </tr>
+    
+                <tr align="center">
+                    <td>
+                        <label for="Second Number">Second Number</label>
+                    </td>
+                    <td>
+                        <input type="number" id="num_2" name="number 2" placeholder="Enter the Second Number"> 
+                    </td>
+                </tr>
+    
+                <tr align="center">
+                    <td>
+                        <label for="Result">Result</label>
+                    </td>
+                    <td id="result">
+    
+                    </td>
+                </tr>
+    
+                <tr align="center">
+                    <td colspan="2">
+                        <button type="button" onclick="AddNum()">
+                            Add
+                        </button>
+    
+                        <button type="button" onclick="SubNum()">
+                            Subtract
+                        </button>
+    
+                        <button type="button" onclick="MulNum()">
+                            Multiply
+                        </button>
+    
+                        <button type="button" onclick="DivNum()">
+                            Divide
+                        </button>
+    
+                        <button type="button" onclick="RemNum()">
+                            Remainder
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+
+    <br><br><br><br><br>
+
+    <center>
+        <p><b>**This Program does the function of a simple calculator -- Add, Subtract, Multiply, Divide & Remainder**</b></p>
+    </center>
+
+</body>
+</html>

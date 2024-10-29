@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function multi(){
+            var number = parseInt(prompt('Enter an integer: '));
+
+            // Take range input from the user
+            var range = parseInt(prompt('Enter a range: '));
+
+            // Create the multiplication table
+            for (var i = 1; i <= range; i++) {
+            var result = i * number;
+            document.writeln(number + " " + "x" + " " + i + " " + "=" + " " + result + "<br>");
+            }
+        }
+    </script>
+
+    <center>
+        <button onclick="multi()">start</button>
+    </center>
+
+    <br><br><br><br><br>
+    <p align="center">
+        <b>
+            <u>
+                **This program is used to print the multiplication table of any positive integer given the range or multiplier.
+            </u>
+        </b>
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function IsValid(){
+        var a;
+        var b;
+        var c;
+        var resultText1;
+        var resultText2;
+
+        a = parseFloat(prompt("Enter the value of side A:: "));
+        b = parseFloat(prompt("Enter the value of side B:: "));
+        c = parseFloat(prompt("Enter the value of side C:: "));
+
+        if((a<=0 || b<=0 || c<=0) || ((a+b)<=c || (b+c)<=a || (c+a)<=b)){
+            alert("A triangle cannot be formed from these sides");
+        }
+        else{
+            alert("A triangle can be formed from the given sides");
+        
+
+            if(a==b && b==c){
+                resultText1 = "Equilateral";
+                document.getElementById("type").innerHTML = resultText1;
+            }
+            else if(a==b || b==c || c==a){
+                resultText1 = "Isosceles";
+                document.getElementById("type").innerHTML = resultText1;
+            }
+            else{
+                resultText1 = "Scalene";
+                document.getElementById("type").innerHTML = resultText1;
+            }
+
+            var s = (a + b + c) / 2;
+            var area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+
+            resultText2 = area.toFixed(2);
+
+            document.getElementById("area").innerHTML = resultText2;
+        }
+    }
+</script>
+
+<h1 align="center"><u>Check type and find Area of a Triangle if it can be formed</u></h1>
+
+<br><br><br><br>
+
+<form method="" action="" target="">
+    <center>
+        <table border="2" width="400">
+            <tr>
+                <td>
+                    <label for="Type">Type</label>
+                </td>
+                <td id="type"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Area">Area</label>
+                </td>
+                <td id="area"></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">
+                    <button type="button" onclick="IsValid()">Enter</button>
+                </td>
+            </tr>
+        </table>
+    </center>
+</form>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<p align="center"><b>**This program is used to check if the sides can from a triangle, check the type of triangle that will  be formed and also find the area of the so formed triangle**</b></p>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function isPrime(num) {
+    if (num <= 1) {
+        alert("Please enter a value greater than or equal to 0");
+    }
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function NthPrime(n) {
+    let count = 0;
+    let num = 2;
+    while (count < n) {
+        if (isPrime(num)) {
+            count++;
+        }
+        num++;                                                          
+    }
+    return num - 1;
+}
+
+user_input = parseInt(prompt("Enter a positive integer (greater than 0):"));
+if (user_input > 0) {
+    nthPrime = NthPrime(user_input);
+    alert("The nth Prime Number is : " +" "+ nthPrime)
+} 
+else {
+    alert("Please enter a valid positive integer.");
+}
+    </script>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h3 align="center" style="font-weight: bold;">**This program is used to find the nth Prime Number**</h3>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!-- Use Alert box to display the result instead of displaying it in the form itself -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Classification</title>
+</head>
+
+<script>
+    function ClassifyNumber(){
+        var resultText; //variable to store the result
+        var num = parseInt(document.getElementById("num").value); //variable to store the value enetred by the user
+        let sum = 0; //Initialize sum as zero
+
+        if(num==0){
+            alert("Please Enter a Number Greater Than 0 !!");
+            resultText = null;
+            document.getElementById("result").innerHTML = resultText;
+        }
+
+        for(i=1;i<num;i++){
+            if(num%i==0){
+                sum+=i;
+            }
+        }
+
+        if(sum==num){
+           if(num!=0 && num>0){
+            resultText = "Perfect";
+            document.getElementById("result").innerHTML = resultText;
+           }
+        }
+        else if(sum<num){
+            resultText = "Deficient";
+            document.getElementById("result").innerHTML = resultText;
+        }
+        else{
+            resultText = "Abundant";
+            document.getElementById("result").innerHTML = resultText;
+        }
+    }
+</script>
+
+<h1 align="center"><u>Perfect, Abundant or Deficient</u></h1>
+
+<br><br>
+
+<form method="" action="" target="">
+    <center>
+        <table border="1" width="400px">
+            <tr align="center">
+                <td>
+                    <label for="Input">Input</label>
+                </td>
+                <td>
+                    <input type="text" id="num" placeholder="Enter a number" maxlength="20" required>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <label for="Result">Result</label>
+                </td>
+                <td id="result"></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">
+                    <button type="button" onclick="ClassifyNumber()">
+                        CHECK
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </center>
+</form>
+
+<br><br><br><br><br><br><br><br><br><br>
+<p style="font-size: 30; font-weight: bold;" align="center">**This program is used to check if a given number is Perfect, Abundant or Deficient</p>
+</html>

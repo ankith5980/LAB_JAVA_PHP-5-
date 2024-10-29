@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area and Circumference of a Circle</title>
+</head>
+<h1 align="center"><u>Calculate the Area and Circumference of a Circle</u></h1>
+
+<script>
+    function calculate(){
+        var radius = document.getElementById("radius").value;
+
+        if (radius == 0){
+            alert("Please Enter a Positive Value for Radius !!")
+        }
+
+        var area = Math.PI * Math.pow(radius,2);
+        var circumference = 2 * Math.PI * radius;
+
+        var resultText1 = area.toFixed(2);
+        var resultText2 = circumference.toFixed(2);
+
+        document.getElementById("area").innerHTML = resultText1;
+        document.getElementById("circum").innerHTML = resultText2;
+    }
+</script>
+
+<form method="" action="" target="">
+    <center>
+        <table border="1" width="400">
+            <tr align="center">
+                <td>
+                    <table border="0">
+                        <tr align="center">
+                            <td>
+                                <label for="Radius">Radius</label>
+                            </td>
+                            <td>
+                                <input type="number" name="Radius" id="radius" placeholder="Enter the Radius here" maxlength="20">
+                            </td>
+                        </tr>
+                        <tr align="center">
+                            <td>
+                                <label for="Area">Area</label>
+                            </td>
+                            <td id="area">
+
+                            </td>
+                        </tr>
+                        <tr align="center">
+                            <td>
+                                <label for="Circumference">Circumference</label>
+                            </td>
+                            <td id="circum">
+
+                            </td>
+                        </tr>
+                        <tr align="center">
+                            <td colspan="2">
+                                <button type="button" onclick="calculate()">
+                                    Calculate
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </center>
+</form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center>
+    <p style="font-size: 30;"> <b>** This Program is used to find out the Area and Circumference of a Circle**</b> </p>
+</center>
+</html>

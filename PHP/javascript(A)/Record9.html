@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Validation</title>
+</head>
+<body align="center">
+    <h2><b><u>Email Validation Form</u></b></h2>
+    <br><br>
+    <form id="emailForm">
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="button" onclick="validateEmail()">Validate</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function validateEmail() {
+            var email = document.getElementById('email').value;
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+            var result = document.getElementById('result');
+
+            if (emailPattern.test(email)) {
+                result.textContent = "The email address is valid.";
+                result.style.color = "green";
+            } else {
+                result.textContent = "The email address is not valid.";
+                result.style.color = "red";
+            }
+        }
+    </script>
+
+    <br><br><br><br><br><br><br>
+
+    <p align="center"><b>**This program verifies if the email id that has been entered is in the valid format**</b></p>
+</body>
+</html>

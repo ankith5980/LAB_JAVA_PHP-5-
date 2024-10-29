@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 align="center"><b><u>Change Background Color From An Array</u></b></h1>
+
+    <br><br><br><br><br>
+
+    <center>
+        <input type="text" id="colorInput" placeholder="Enter a color">
+        <button onclick="addColor()">Add Color</button>
+        <button onclick="changeColor()">Change Background Color</button>
+    </center>
+
+    <script>
+        var colors = [];
+
+        function addColor() {
+            const colorInput = document.getElementById('colorInput').value;
+            if (colorInput) {
+                colors.push(colorInput);
+                document.getElementById('colorInput').value = ''; // Clear the input field
+                alert(`Color added!`);
+            } else {
+                alert('Please enter a color.');
+            }
+        }
+
+        function changeColor() {
+            if (colors.length > 0) {
+                var randomIndex = Math.floor(Math.random() * colors.length);
+                document.body.style.backgroundColor = colors[randomIndex];
+            } else {
+                alert('No colors available. Please add some colors first.');
+            }
+        }
+    </script>
+
+    <br><br><br><br><br>
+
+    <p align="center"><b>**This program changes the color of the background randomly while taking the colors from the array**</b></p>
+
+</body>
+</html>

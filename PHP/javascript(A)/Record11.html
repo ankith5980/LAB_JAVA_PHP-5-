@@ -64,10 +64,6 @@
         function checkPalindrome() {
             const inputString = document.getElementById('inputString').value;
 
-            //const inputString = null
-
-            //alert(inputString);
-
             const message = document.getElementById('message');
 
             // Remove any non-alphanumeric characters and convert to lowercase
@@ -81,11 +77,6 @@
                 message.textContent = `"${inputString}" is a palindrome!`;
                 message.style.color = 'green';
             } 
-            // else if (inputString === "") {
-            //     alert("Please Enter a String !!");
-            //     message.textContext = 'Please Enter a String !!';
-            //     message.style.color = 'black';
-            //  }
             else {
                 message.textContent = `"${inputString}" is not a palindrome.`;
                 message.style.color = 'red';

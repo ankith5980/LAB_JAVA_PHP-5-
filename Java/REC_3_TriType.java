@@ -54,7 +54,6 @@ public class REC_3_TriType {
     }
 
     private static float sqrt(int i) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'sqrt'");
     }
 }

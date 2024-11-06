@@ -65,7 +65,7 @@
 
         $fname = $_POST["First"];
         $sname = $POST["Second"];
-        $fullname = print "$fname $sname";
+        $fullname = print "$fname " + " " + "$sname";
         $contact = $_POST["Contact"];
         $address = $_POST["Address"];
         $majorskill = $_POST["skill"];

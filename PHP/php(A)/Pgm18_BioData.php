@@ -29,7 +29,7 @@
                     <label for="Contact Info :: ">Contact Info :: </label>
                 </td>
                 <td>
-                    <input type="number" name="Contact" placeholder="Mobile Number" maxlength="10" required>
+                    <input type="number" name="Contact" placeholder="Mobile Number" max="10" required>
                 </td>
             </tr>
             <tr>

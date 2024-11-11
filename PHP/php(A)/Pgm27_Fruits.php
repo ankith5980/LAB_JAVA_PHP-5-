@@ -23,7 +23,7 @@
 <!-- PHP SECTION -->
 <?php
 if ($_POST) {
-    echo "<h3> You have selected : </h3>";
+    echo "<h3> You've selected : </h3>";
     echo $_POST["fruits"];
 }
 ?>
